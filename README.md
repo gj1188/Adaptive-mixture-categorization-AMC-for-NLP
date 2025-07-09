@@ -19,7 +19,7 @@ cutoff: Optimal thresholds for each variable
 group: Number of categories per variable
 
 F: Maximized F-statistics at each iteration
-library(yourpackage)
+
 
 # Preprocess NLP variables with AMC before regression
 nlp_thresholds <- amc(nlp_data)
