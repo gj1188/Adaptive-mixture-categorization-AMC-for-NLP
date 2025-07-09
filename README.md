@@ -26,7 +26,7 @@ nlp_thresholds <- amc(nlp_data)
 
 nlp_categories <- cut(nlp_data, breaks= c(min(nlp_data)-1, nlp_thresholds, max(nlp_data)), labels = 1:(length(nlp_thresholds)+1))
 
-glm(suicide_risk ~ ., data = nlp_categories)
+glm(suicide_Status ~ factor(nlp_categories))
 
 References
 
