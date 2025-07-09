@@ -23,6 +23,7 @@ library(yourpackage)
 
 # Preprocess NLP variables with AMC before regression
 nlp_categories <- amc(nlp_data)$output
+
 glm(suicide_risk ~ ., data = nlp_categories)
 
 References
