@@ -22,7 +22,9 @@ F: Maximized F-statistics at each iteration
 library(yourpackage)
 
 # Preprocess NLP variables with AMC before regression
-nlp_categories <- amc(nlp_data)$output
+nlp_thresholds <- amc(nlp_data)
+
+nlp_categories <- cut(nlp_data, breaks= c(min(nlp_data)-1, nlp_thresholds, max(nlp_data)), labels = 1:(length(nlp_thresholds)+1))
 
 glm(suicide_risk ~ ., data = nlp_categories)
 
